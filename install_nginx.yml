@@ -1,0 +1,18 @@
+- name: Instalar e Configurar Nginx
+  hosts: <server_name>
+  become: true
+  tasks:
+    - name: Atualizar pacotes APT
+      apt:
+        update_cache: yes
+
+    - name: Instalar Nginx
+      apt:
+        name: nginx
+        state: present
+
+    - name: Iniciar e habilitar Nginx
+      service:
+        name: nginx
+        state: started
+        enabled: yes
