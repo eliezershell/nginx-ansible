@@ -30,7 +30,7 @@ O playbook `install_nginx.yml` é responsável por instalar e configurar o Nginx
 
 ## Como Usar
 
-### 1. Modificar o Arquivo de Inventário
+### 1. Modificar os Arquivos
 
 Edite os arquivos com as informações corretas do seu servidor, substituindo os placeholders:
 
