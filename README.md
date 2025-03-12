@@ -65,34 +65,9 @@ O arquivo `install_nginx.yml` é o seguinte:
 
 ### 1. Modificar o Arquivo de Inventário
 
-Edite o arquivo `hosts.ini` com as informações corretas do seu servidor, substituindo os placeholders:
+Edite os arquivos com as informações corretas do seu servidor, substituindo os placeholders:
 
 - **`<server_name>`**: Nome do servidor.
 - **`<server_ip>`**: IP do servidor.
 - **`<username>`**: Usuário para autenticação.
 - **`<path_to_private_key>`**: Caminho para a chave privada usada para autenticação SSH.
-
-Exemplo:
-
-```ini
-[servers]
-myserver1 ansible_host=192.168.1.100 ansible_user=ubuntu ansible_private_key_file=~/.ssh/mykey.pem
-```
-
-### 2. Executar o Playbook
-
-Execute o playbook com o comando Ansible:
-
-```bash
-ansible-playbook -i hosts.ini install_nginx.yml
-```
-
-Isso fará com que o Ansible conecte-se aos servidores definidos no `hosts.ini` e execute as tarefas para instalar e configurar o Nginx.
-
-## Contribuições
-
-Sinta-se à vontade para abrir problemas (issues) ou enviar pull requests para melhorar este repositório.
-
-## Licença
-
-Este repositório está licenciado sob a [MIT License](LICENSE).
